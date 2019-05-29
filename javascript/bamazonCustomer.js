@@ -1,7 +1,6 @@
 var mysql = require ("mysql")
 var inquirer = require ("inquirer");
 
-var totalBalance
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -11,15 +10,37 @@ var connection = mysql.createConnection({
     database: "bamazon_db"
 
 });
-// Establish connection
+// connect to MYSQL server and sql database
 connection.connect(function(err) {
+        // console.log(" connected as item_id" + connection.threadId +  "\n");
+
     if (err) throw err;
-    console.log(" connected as item_id" + connection.threadId +  "\n");
-    displayProducts();
-    // start();
+    // displayProducts();
+    start();
     
 });
-//////// FUNCTIONS ///////////////////////////////////////////////////
+
+
+function start() {
+    inquirer
+    .prompt({
+        name: "confirm",
+        type: "confirm",
+        message: "| Welcome to Bamazon! Would you like to place your order ? | ",
+        choices:["PURCHASE", "EXIT"]
+    })
+    .then (function(answer) {
+        // based on their answers, call post function
+        if (answer.confirm === true) {
+            // purchaseItem();
+            displayProducts();
+        } else {
+            console.log("Come back again!");
+        }
+    });
+}
+
+//////// FUNCTIONS /////////////////////
 
 function displayProducts() {
     console.log("displaying products...");
@@ -29,34 +50,19 @@ function displayProducts() {
         console.log("|---------------------------------------------------------------------------------------|");
         console.log("|----------------------------BAMAZON INVENTORY------------------------------------------|");
         console.log("|---------------------------------------------------------------------------------------|");
-
+        console.log("|------------------------------==WELCOME==----------------------------------------------|");
+        
         for (i= 0; i < res.length; i++) {
             console.log(" Product ID : " + res[i].item_id + " || Produce Name : " + res[i].product_name + " || Price : " + res[i].price + " || Stock_quantity: " + res[i].stock_quantity);
             console.log("|---------------------------------------------------------------------------------------|");   
         }
+
         purchaseItem();
         // connection.end();
     });
 }
-        
-// function start() {
-//     inquirer
-//     .prompt({
-//         name: "get",
-//         type: "list",
-//         message: "Which product would you like to [GET]?",
-//         choices:["GET", "EXIT"]
-//     })
-//     .then (function(answer) {
-//         // based on their answers, call post function
-//         if (answer.product === "GET") {
-//             purchaseItem();
-//         }
-//         connection.end();  
-// })
-// }
 
-purchaseItem = function() {
+    purchaseItem = function() {
     // prompt for info about the item being wanted
     inquirer.prompt([
         {
@@ -67,105 +73,120 @@ purchaseItem = function() {
         validate: function(value) {
             var valid = value.match(/^[0-9]+$/)
             if (valid) {
-            // if (isNaN(value) === false) {
+
                 return true;
             }
             return false;
         }
-    },
+        },
     {
             name: "stock",
             type: "input",
             message: "How many units do you want?",
-            // filter: Number,
             validate: function(value) {
                 var valid = value.match(/^[0-9]+$/)
                     if (valid) {
-                // if (isNaN(value) === false) {
+
                   return true;
                 }
                 // return false;
-                return 'Please enter a numerical value'
+                return  false;
               }
         }
             ])
             .then(function(answer) {
+
+
                 console.log(answer);
                 
-                // when finished prompting, insert p
-                // connection.query("SELECT * FROM products", function(err,res) {
-                    // var query = 'SELECT item_id, product_name, price, stock_quantity FROM products WHERE ?';
-
-                   // [
-                     //   {
-
-                        // product_name: answer.ID
-                    //},
-                   // {
-                        // stock_quantity: answer.stock
-                        // stock_quantity: answer.price
-
-                    // }
-                // ],
-                connection.query(
-                    // "SELECT * FROM products WHERE item_id = ?",[answer.ID], function (err,res) {
-                        'SELECT item_id, product_name, price, stock_quantity FROM products WHERE item_id = ?',[answer.ID], function (err,res) {
+        
+                connection.query( 
+                    'SELECT item_id, product_name, price, stock_quantity FROM products WHERE item_id = ?',[answer.ID], function (err,res) {
                             if (err) throw err;
-                            console.log(err  + "err");
+                            // console.log(err  + "err");
                             console.log(res);
-                
-                            
+                            // console.log(answer.stock );
+                            // console.log(res[0].stock_quantity);
 
-                            // for (var i = 0; i < res.length; i++) {
-                                // console.log(res);
-                                
-                               
-                            // }
-
-                        // if (err) throw err;
-                        console.log(answer.stock );
-                        console.log(res[0].stock_quantity);
-                        
-                        
+                    
                         if (answer.stock > res[0].stock_quantity) {
                             
-                            // console.log("Your proudct has been ordered.");
-                            
-                            // if (answer.stock_quantity === 0) {
-
-                            // }
-
                             console.log('Sorry, We have infsufficent quantity on this product');
-                            console.log('This order has been cancelled');    
-                        // }
-                        // else {
-                            // console.log("Thanks for your order");
+                            console.log('This order has been cancelled');  
+                            console.log("Would you like to try again?");
+                              
+                         } else {
+
+                            var updatedQuantity =
+                            ((res[0].stock_quantity - parseInt(answer.stock)));
+                            // ((res[0].stock_quantity - (answer.stock)));
+                            console.log("Your order is in stock!");
+                            console.log("The remaining of Quantities is " +'\x1b[33m',updatedQuantity,'\x1b[0m' );
                             
-                        }
-                        connection.end();
+
+                            connection.query(
+                                // "UPDATE stock_quantity FROM products WHERE ?",
+                                // "UPDATE stock_quantity WHERE item_id = ?",function (err,res) {
+                                    "UPDATE stock_quantity FROM products WHERE item_id = ?",function (err,res) {
+                                [
+                                    {
+                                        stock_quantity: updatedQuantity
+                                    },
+                                    
+                                ],
+                                function(err,res) {
+                                if (err) throw err;
+                                }
+                            }
+                            
+                            );
+                            // var totalCost = res[0].price * answer.stock_quantity;
+                            var totalCost = ((res[0].price * parseFloat(answer.stock)));
+                            
+                            console.log("Your cost is " +'\x1b[33m',totalCost,'\x1b[0m');
+                            console.log("Thanks for your order");
+                            console.log("Come back soon!!"); 
+                             }
+                            connection.end();
+                            });
+                        });
                     }
-                    )
+                    
+              
+                        // }}
+                    
+    //                     connection.end();
+                    // })
+        // });
+    // }
+    // // connection.end();
+
+
+    // function cost (itemID, stock) {
+    //     connection.query ("SELECT * FROM products WHERE ?", {
+
+    //         item_id: itemID
+            
+    //     },
+    //         function (err, res) {
+
+    //         if (err) throw err; {
+
+        
+    //         var totalCost = res[0].price * stock;
+            
+    //         console.log("Your total is $ " + totalCost);
+    //       
     
-                })
-    }
+
+            
 
 
-                    // }]
-                // connection.query( "SELECT * FROM products WHERE ?"
-                    // "INSERT INTO items WHERE ?",
-                    
-                    // product_name: answer.ID,
-                    // department_name: answer.department_name,
-                    // price: answer.price,
-                    // stock_quantity: answer.stock
-                    // },
-                    
-                    // function(err) {
-                        // if (err) throw err;
-                        // console.log("Your item has been ordered!");
-                    
-                    // if (item.stock_quantity === 0) {
-                    //    console.log("Sorry, We have insufficent quantity on this product ");
+        
+
+
+
+                   
            
     
 
