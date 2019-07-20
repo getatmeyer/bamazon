@@ -1,16 +1,18 @@
 # Bamazon
 
-H1 Setup
+<H1> Setup
+
 To run this application, you would need MySQL and Node installed on your computer.
 
-H2 Run Application
-H4 git clone https://github.com/getatmeyer/Bamazon.git
+<H2> Run Application
 
-H4 cd Bamazon
+ git clone https://github.com/getatmeyer/Bamazon.git
 
-H4 npm install
+cd Bamazon
 
-H4 node bamazonCustomer.js
+npm install
+
+node bamazonCustomer.js
 <hr>
 <h1>Customer Demo
 
