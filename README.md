@@ -1,6 +1,6 @@
 # Bamazon
 
-<H2>Setup<H2>
+<H2>Setup
 
 To run this application, you would need MySQL and Node installed on your computer.
 
