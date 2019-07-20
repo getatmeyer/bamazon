@@ -1,6 +1,6 @@
 # Bamazon
 
-<H2>Setup
+<H2> Setup
 
 <H4>To run this application, you would need MySQL and Node installed on your computer.
 
@@ -15,7 +15,7 @@ npm install
 node bamazonCustomer.js
 <hr>
 
-<H1> Customer Demo <H1>
+<H2> Customer Demo
 
 1. <h4> Welcome to Bamazon! Would you like to place your order?
 2. <h4> Enter product ID you want to buy.
