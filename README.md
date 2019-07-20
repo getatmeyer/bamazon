@@ -42,14 +42,14 @@ The manager interface presents a list of actions:
 3. Add to Inventory
 4. Add New Product
 
-<h1> Techonlogies 
+<h1> Techonlogies </h1>
 
-* JavaScript
-* Node JS
-* MySQL
-* NPM Packages:
- ... Inquirer
- ... mysql
+ * <h4> JavaScript
+*  <h4> Node JS
+*  <h4> MySQL
+*  <h4> NPM Packages:
+ Inquirer
+ mysql
 
 
 
