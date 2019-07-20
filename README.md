@@ -21,5 +21,5 @@ node bamazonCustomer.js
 3. How many units do you want?
 4. Confirm order & update product inventory in database
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/customerimg.png)
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
 
