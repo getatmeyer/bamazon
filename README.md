@@ -1,10 +1,10 @@
 # Bamazon
 
-<H2>Setup
+<H2>Setup<H2>
 
-To run this application, you would need MySQL and Node installed on your computer.
+<H4>To run this application, you would need MySQL and Node installed on your computer.
 
-<H2> Run Application
+<H4> Run Application
 
  git clone https://github.com/getatmeyer/Bamazon.git
 
