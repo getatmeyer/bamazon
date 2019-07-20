@@ -31,6 +31,27 @@ The manager interface presents a list of actions:
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/productimg.png)
 
+1. View Products for Sale
+
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/viewproduct.png)
+
+2. View Low Inventory
+
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/viewproduct.png)
+
+3. Add to Inventory
+4. Add New Product
+
+<h1> Techonlogies 
+
+* JavaScript
+* Node JS
+* MySQL
+* NPM Packages:
+ ... Inquirer
+ ... mysql
+
+
 
 
 
