@@ -25,6 +25,8 @@ node bamazonCustomer.js
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/customerimg.png)
 
+*
+<H2> Manager Demo <H2>
 
 
 
