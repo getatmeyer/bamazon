@@ -23,3 +23,7 @@ node bamazonCustomer.js
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
 
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/bamazon/customerimg.png)
+
+
+
