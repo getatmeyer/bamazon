@@ -119,6 +119,8 @@ function displayProducts() {
 
                             var updatedQuantity =
                             ((res[0].stock_quantity - parseInt(answer.stock)));
+                            console.log("Verfiying to see if the quantity of"+'\x1b[33m',answer.stock,'\x1b[0m',"is in stock.");
+                            
                             // ((res[0].stock_quantity - (answer.stock)));
                             console.log("Your order is in stock!");
                             console.log("The remaining of Quantities is " +'\x1b[33m',updatedQuantity,'\x1b[0m' );
@@ -127,7 +129,7 @@ function displayProducts() {
                             connection.query(
                                 // "UPDATE stock_quantity FROM products WHERE ?",
                                 // "UPDATE stock_quantity WHERE item_id = ?",function (err,res) {
-                                    "UPDATE stock_quantity FROM products WHERE item_id = ?",function (err,res) {
+                                    "UPDATE stock_quantity WHERE ?",function (err,res) {
                                 [
                                     {
                                         stock_quantity: updatedQuantity
@@ -142,6 +144,7 @@ function displayProducts() {
                             );
                             // var totalCost = res[0].price * answer.stock_quantity;
                             var totalCost = ((res[0].price * parseFloat(answer.stock)));
+                            console.log(res[0].price);
                             
                             console.log("Your cost is " +'\x1b[33m',totalCost,'\x1b[0m');
                             console.log("Thanks for your order");
