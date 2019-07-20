@@ -25,8 +25,12 @@ node bamazonCustomer.js
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/customerimg.png)
 
-*
 <H2> Manager Demo <H2>
+
+The manager interface presents a list of actions:
+
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/productimg.png)
+
 
 
 
