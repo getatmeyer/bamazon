@@ -44,9 +44,9 @@ The manager interface presents a list of actions:
 
 <h1> Techonlogies </h1>
 
- * <h4> JavaScript
-*  <h4> Node JS
-*  <h4> MySQL
+* <h4> JavaScript<br/>
+*  <h4> Node JS<br/>
+*  <h4> MySQL<br/>
 *  <h4> NPM Packages:
  Inquirer
  mysql
