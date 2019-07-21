@@ -15,18 +15,20 @@ npm install
 node bamazonCustomer.js
 <hr>
 
-<H1> Customer Demo <H1>
-
- #### H4 1. Welcome to Bamazon! Would you like to place your order?
-2. <h4> Enter product ID you want to buy.
-3. <h4> How many units do you want?
-4. <h4> Confirm order & update product inventory in database
+# Customer Demo
+####
+1. Welcome to Bamazon! Would you like to place your order?
+2. Enter product ID you want to buy.
+3. How many units do you want?
+4. Confirm order & update product inventory in database
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/customerimg.png)
 
-<H2> Manager Demo <H2>
+## Manager Demo
+<!-- <H2> Manager Demo <H2> -->
+
 
 The manager interface presents a list of actions:
 
@@ -34,7 +36,7 @@ The manager interface presents a list of actions:
 
 1. View Products for Sale
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/viewproduct.png)
+![alt text](https://github.com/getatmeyer/markdown-here/raw//bamazon/viewproduct.png)
 
 2. View Low Inventory
 
