@@ -24,7 +24,7 @@ node bamazonCustomer.js
 
 ![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
 
-![alt text](https://github.com/getatmeyer/markdown-here/bamazon/customerimg.png)
+![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
 
 ## Manager Demo
 <!-- <H2> Manager Demo <H2> -->
@@ -32,15 +32,15 @@ node bamazonCustomer.js
 
 The manager interface presents a list of actions:
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/productimg.png)
+![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/productimg.png)
 
 1. View Products for Sale
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw//bamazon/viewproduct.png)
+![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/viewproduct.png)
 
 2. View Low Inventory
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/bamazon/viewproduct.png)
+![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/lowinventory.png)
 
 3. Add to Inventory
 4. Add New Product
