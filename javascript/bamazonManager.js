@@ -52,8 +52,6 @@ function start() {
         });
 }
 
-
-
 function display() {
 
     console.log("displaying products...");
@@ -222,39 +220,39 @@ function addInventory() {
             //end if .then
     // })
 // }
-function addProduct() {
-    inquirer.prompt([{
+// function addProduct() {
+//     inquirer.prompt([{
 
-        type: "name",
-        name: "productName",
-        message: "Please enter the item of the new Product."
-    },
-    {
-        type: "input",
-        name: "inputDepartment",
-        message: "Please enter which department for the new product to be added to."
-    },
-    {
-        type: "input",
-        name: "inputPrice",
-        message: "Please enter the price of the new product."
-    },
-    {
-        type: "input",
-        name: "inputStock",
-        message: "Please enter the stock quantity of the new product."
-    },
-    {
-    }
-    ]).then(function (answer) {
+//         type: "name",
+//         name: "productName",
+//         message: "Please enter the item of the new Product."
+//     },
+//     {
+//         type: "input",
+//         name: "inputDepartment",
+//         message: "Please enter which department for the new product to be added to."
+//     },
+//     {
+//         type: "input",
+//         name: "inputPrice",
+//         message: "Please enter the price of the new product."
+//     },
+//     {
+//         type: "input",
+//         name: "inputStock",
+//         message: "Please enter the stock quantity of the new product."
+//     },
+//     {
+//     }
+//     ]).then(function (answer) {
 
-        connection.query("INSERT INTO products SET ?", {
-            product_name: answer.productName,
-            department_name: answer.inputDepartment,
-            price: insertNew.answer.inputPrice,
-            stock_quantity: answer.inputStock
-        }, function (err, res) { });
-    });
-}
+//         connection.query("INSERT INTO products SET ?", {
+//             product_name: answer.productName,
+//             department_name: answer.inputDepartment,
+//             price: insertNew.answer.inputPrice,
+//             stock_quantity: answer.inputStock
+//         }, function (err, res) { });
+//     });
+// }
 start();
 
