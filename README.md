@@ -32,8 +32,7 @@ node bamazonCustomer.js
 
 The manager interface presents a list of actions:
 
-![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/productimg.png)
-<img src="markdown-here/raw/master/src/common/images/productimg.png"
+![alt text] <img src="markdown-here/raw/master/src/common/images/productimg.png">
 <img src="./markdown-here/raw/master/src/common/images/productimg.png"
 
 
