@@ -27,7 +27,6 @@ node bamazonCustomer.js
 ## Manager Demo
 <!-- <H2> Manager Demo <H2> -->
 
-
 The manager interface presents a list of actions:
 
 <img src="markdown-here/raw/master/src/common/images/productimg.png">
