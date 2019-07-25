@@ -48,8 +48,6 @@ The manager interface presents a list of actions:
 *  <h4> Node JS<br/>
 *  <h4> MySQL<br/>
 *  <h4> NPM Packages:
- --- Inquirer
- mysql
 
 
 
