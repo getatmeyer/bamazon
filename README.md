@@ -22,9 +22,7 @@ node bamazonCustomer.js
 3. How many units do you want?
 4. Confirm order & update product inventory in database
 
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
-
-![alt text](https://github.com/getatmeyer/markdown-here/raw/master/src/common/images/customerimg.png)
+![alt text]<img src="markdown-here/raw/master/src/common/images/customerresult.png">
 
 ## Manager Demo
 <!-- <H2> Manager Demo <H2> -->
@@ -32,17 +30,18 @@ node bamazonCustomer.js
 
 The manager interface presents a list of actions:
 
-![alt text] <img src="markdown-here/raw/master/src/common/images/productimg.png">git
+![alt text] <img src="markdown-here/raw/master/src/common/images/productimg.png">
 
 
 1. View Products for Sale
 
 <!-- ![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/viewproduct.png) -->
-![alt text] <img src="markdown-here/raw/master/src/common/images/viewproduct.png">git
+![alt text] <img src="markdown-here/raw/master/src/common/images/viewproduct.png">
 
 2. View Low Inventory
 
 ![alt text](https://github.com/getatmeyer/bamazon/markdown-here/raw/master/src/common/images/lowinventory.png)
+<img src>
 
 3. Add to Inventory
 4. Add New Product
