@@ -31,7 +31,6 @@ The manager interface presents a list of actions:
 
 <img src="markdown-here/raw/master/src/common/images/productimg.png">
 
-
 1. View Products for Sale
 
 <img src="markdown-here/raw/master/src/common/images/viewproduct.png">
