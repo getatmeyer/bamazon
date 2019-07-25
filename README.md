@@ -22,7 +22,7 @@ node bamazonCustomer.js
 3. How many units do you want?
 4. Confirm order & update product inventory in database
 
-![alt text]<img src="markdown-here/raw/master/src/common/images/customerresult.png">
+<img src="markdown-here/raw/master/src/common/images/customerresult.png">
 
 ## Manager Demo
 <!-- <H2> Manager Demo <H2> -->
@@ -30,16 +30,16 @@ node bamazonCustomer.js
 
 The manager interface presents a list of actions:
 
-![alt text] <img src="markdown-here/raw/master/src/common/images/productimg.png">
+<img src="markdown-here/raw/master/src/common/images/productimg.png">
 
 
 1. View Products for Sale
 
-![alt text] <img src="markdown-here/raw/master/src/common/images/viewproduct.png">
+<img src="markdown-here/raw/master/src/common/images/viewproduct.png">
 
 2. View Low Inventory
 
-![alt text] <img src="markdown-here/raw/master/src/common/images/lowinventory.png">
+<img src="markdown-here/raw/master/src/common/images/lowinventory.png">
 
 3. Add to Inventory
 4. Add New Product
